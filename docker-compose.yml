@@ -2,7 +2,9 @@ version: "2"
 
 services:
     php:
-        image: php:7-alpine
+        build:
+            context: .
+            dockerfile: php7-dockerfile
         container_name: test_php
         volumes_from:
             - data
@@ -23,3 +25,5 @@ services:
         build:
             context: .
             dockerfile: data-dockerfile
+        volumes:
+            - /var/www/html

@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM busybox
+
 # content
-CMD /sbin/init
 ADD ./web /var/www/html
