@@ -26,4 +26,5 @@ services:
             context: .
             dockerfile: data-dockerfile
         volumes:
-            - /var/www/html
+            - ./web:/var/www/html
+            - ./vendor:/var/www/vendor
